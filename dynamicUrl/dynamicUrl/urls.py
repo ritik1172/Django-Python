@@ -1,5 +1,5 @@
 """
-URL configuration for new project.
+URL configuration for dynamicUrl project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/6.0/topics/http/urls/
@@ -16,13 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from . import views
-
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home, name='home'),
-    path('about/', views.about, name='about'),
-    path('shop/', include('shop.urls')), 
     path('blog/', include('blog.urls')),
 ]
